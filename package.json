@@ -1,0 +1,25 @@
+{
+  "name": "tspring-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app/index.js",
+    "build": "tsc && npm run copy-static",
+    "copy-static": "ts-node ./build/copy-static.ts",
+    "dev": "npm run build && ts-node-dev --respawn --debounce 3000 --watch app app/index.ts"
+  },
+  "dependencies": {
+    "@tspring/boot": "^0.1.6"
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "index.js",
+  "author": "vaniship@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@types/shelljs": "^0.8.6",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.5.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.4"
+  }
+}
